@@ -13,4 +13,4 @@ Base de datos en MySQL diseñada para un concesionario de coches.
 Importamos el archivo a nuestra base de datos MySQL
 <br>
 
-# Esta base de datos esta personalizada para un caso concreto.
+Hay que tener en cuenta que esta base de datos esta personalizada para un caso concreto.
