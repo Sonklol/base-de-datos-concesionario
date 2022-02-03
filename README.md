@@ -1,11 +1,10 @@
 ## BASE DE DATOS DE MUESTRA PARA UN CONCESIONARIO DE COCHES
-Base de datos en MySQL diseñada para un concesionario de coches (personalizada para el concesionario concreto).
+Base de datos en MySQL diseñada para un concesionario de coches.
 <br>
 
 <div align="center">
 <img src="https://github.com/Sonklol/base-de-datos-concesionario/blob/main/Ejemplo_Modelo_Entidad_Relacion_ConcesionarioCoches.png?raw=true"/>
 </div>
-<br>
 
 ## Requisitos 📚
 - MYSQL Database Server
