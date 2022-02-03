@@ -1,4 +1,4 @@
-## BASE DE DATOS DE MUESTRA PARA UN CONCESIONARIO DE COCHES
+## BASE DE DATOS MySQL DE MUESTRA PARA UN CONCESIONARIO DE COCHES
 Base de datos en MySQL diseñada para un concesionario de coches.
 <br>
 
