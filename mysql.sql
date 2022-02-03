@@ -1,4 +1,4 @@
-DROP DATABASE IF EXISTS Concesionario;
+--DROP DATABASE IF EXISTS Concesionario;
 CREATE DATABASE Concesionario;
 USE Concesionario;
 
