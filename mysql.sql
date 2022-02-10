@@ -11,8 +11,8 @@ CREATE TABLE Personas (
     segApe VARCHAR(15)
 );
 
-INSERT INTO Personas (idPersona, telefono, NIF, nombre, priApe, segApe) VALUES (1, 657344523, 'A08001851', 'Paquito', 'Scaletta', 'Garcia');
-INSERT INTO Personas (idPersona, telefono, NIF, nombre, priApe, segApe) VALUES (2, 656364623, 'A09005451', 'Alfonso', 'ElCrack', 'Maradona');
+INSERT INTO Personas (idPersona, telefono, NIF, nombre, priApe, segApe) VALUES (1, '657344523', 'A08001851', 'Paquito', 'Scaletta', 'Garcia');
+INSERT INTO Personas (idPersona, telefono, NIF, nombre, priApe, segApe) VALUES (2, '656364623', 'A09005451', 'Alfonso', 'ElCrack', 'Maradona');
 
 CREATE TABLE Empleados (
     idPersonaEmp INT PRIMARY KEY,
@@ -147,8 +147,8 @@ CREATE TABLE Revisiones (
     FOREIGN KEY (idCoche) REFERENCES Coches(idCoche)
 );
 
-INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idCoche, idTecnico) VALUES (1, 'Si', 'Si', 'Si', 1, 1);
-INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idCoche, idTecnico) VALUES (2, 'No', 'Si', 'No', 1, 1);
+INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idCoche, idTecnico) VALUES (1, 1, 1, 1, 1, 1);
+INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idCoche, idTecnico) VALUES (2, 0, 0, 0, 1, 1);
 
 CREATE TABLE Marcas_Modelos (
     idMarca INT,
