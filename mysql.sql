@@ -1,10 +1,10 @@
---DROP DATABASE IF EXISTS Concesionario;
+DROP DATABASE IF EXISTS Concesionario;
 CREATE DATABASE Concesionario;
 USE Concesionario;
 
 CREATE TABLE Personas (
     idPersona INT PRIMARY KEY,
-    telefono NUMERIC(9) NOT NULL,
+    telefono VARCHAR(9) NOT NULL,
     NIF VARCHAR(9) UNIQUE NOT NULL,
     nombre VARCHAR(15) NOT NULL,
     priApe VARCHAR(15) NOT NULL,
@@ -138,15 +138,17 @@ INSERT INTO Coches (idCoche, matricula, PrecioVenta, idVenta, idColor, idMarca, 
 
 CREATE TABLE Revisiones (
     idRevision INT PRIMARY KEY,
-    cambiofiltro VARCHAR(2),
-    cambioaceite VARCHAR(2),
-    cambiofrenos VARCHAR(2),
+    cambiofiltro NUMERIC(1) check(cambiofiltro IN(0, 1)),
+    cambioaceite NUMERIC(1) check(cambioaceite IN(0, 1)),
+    cambiofrenos NUMERIC(1) check(cambiofrenos IN(0, 1)),
+    idCoche INT NOT NULL,
     idTecnico INT NOT NULL,
     FOREIGN KEY (idTecnico) REFERENCES Tecnicos(idTecnico)
+    FOREIGN KEY (idCoche) REFERENCES Coches(idCoche)
 );
 
-INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idTecnico) VALUES (1, 'Si', 'Si', 'Si', 1);
-INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idTecnico) VALUES (2, 'No', 'Si', 'No', 1);
+INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idCoche, idTecnico) VALUES (1, 'Si', 'Si', 'Si', 1, 1);
+INSERT INTO Revisiones (idRevision, cambiofiltro, cambioaceite, cambiofrenos, idCoche, idTecnico) VALUES (2, 'No', 'Si', 'No', 1, 1);
 
 CREATE TABLE Marcas_Modelos (
     idMarca INT,
